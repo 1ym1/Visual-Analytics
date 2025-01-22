@@ -1,0 +1,87 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(216, 234, 255);
+}
+
+/* Header */
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+/* Filters Section */
+#filters {
+    margin-bottom: 0;
+}
+
+.btn-light {
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#filters select {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Description Section */
+.cloud-text {
+    font-size: 1.3rem; /* Adjust font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: rgb(58, 58, 58); /* Text color */
+    text-align: center; /* Center text alignment */
+    padding: 30px; /* Padding for space between text and border */
+    background: linear-gradient(to bottom, #66baff, #a4dfff); /* Gradient sky effect */
+    border-radius: 50px; /* Rounded corners */
+    position: relative; /* To position the pseudo-elements */
+    display: inline-block; /* Fit content width */
+    max-width: 800px;
+}
+
+/* Map Section */
+#visualization-container {
+    width: 100%;
+    max-width: 1100px;
+    height: 750px; /* Added height to ensure legend fits */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+/* States and Bubbles */
+.state {
+    fill: none;
+    stroke: #000;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+}
+
+.bubble {
+    opacity: 0.75;
+    cursor: pointer;
+    transition: stroke-width 0.2s ease;
+}
+
+.bubble:hover {
+    stroke: #000;
+    stroke-width: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}

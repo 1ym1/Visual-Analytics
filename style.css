@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garantit que tout est calculé proprement */
+}
+
+.card {
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Animation au survol */
+    transition: 0.3s ease-in-out; /* Fluidité de l'animation */
+}
+
+.card-title {
+    font-weight: bold;
+    color: #007bff; /* Couleur du titre */
+}
+
+.btn-custom {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded corners */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-transform: uppercase; /* Optional for a modern look */
+}
+
+.btn-custom:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.btn-custom:active {
+    background-color: #003f7f; /* Even darker blue when clicked */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+    transform: translateY(1px); /* Pressed effect */
+}

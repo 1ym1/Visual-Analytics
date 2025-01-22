@@ -1,0 +1,38 @@
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cloud-text {
+    font-size: 1.3rem; /* Adjust font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: rgb(58, 58, 58); /* Text color */
+    text-align: center; /* Center text alignment */
+    padding: 30px; /* Padding for space between text and border */
+    background: linear-gradient(to bottom, #66baff, #a4dfff); /* Gradient sky effect */
+    border-radius: 50px; /* Rounded corners */
+    position: relative; /* To position the pseudo-elements */
+    display: inline-block; /* Fit content width */
+  }
+  
+  .cloud-text::before, .cloud-text::after {
+    content: ""; /* Empty content for the shapes */
+    position: absolute;
+    background: #b3e5ff; /* Same as the background */
+    border-radius: 50%; /* Create circular cloud shapes */
+    width: 50px; /* Adjust size of cloud blobs */
+    height: 50px;
+    z-index: -1; /* Place behind the text box */
+  }
+  
+  .cloud-text::before {
+    top: -20px; /* Position above the text */
+    left: -20px; /* Shift left */
+  }
+  
+  .cloud-text::after {
+    bottom: -20px; /* Position below the text */
+    right: -20px; /* Shift right */
+  }
