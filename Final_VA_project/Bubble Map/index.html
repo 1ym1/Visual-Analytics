@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Debt Visualization</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="d-flex flex-column" style="background-color: rgb(216, 234, 255);">
+    <!-- Header -->
+    <div class="d-flex flex-row p-3 bg-primary text-light align-items-center position-relative" style="height: 10vh;">
+        <img src="./student_debt_logo.png" alt="Website logo" style="height: 90%;">
+        <h1 class="m-3">Beyond the borrow</h1>
+        <a href="../Page-accueil/page-accueil.html" class="btn btn-light d-flex align-items-center justify-content-center position-absolute" style="right: 20px; bottom: 10px; padding: 5px 15px; font-size: 14px; border-radius: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            Back to Homepage
+        </a>
+    </div>
+
+    <!-- Filters Section -->
+    <div id="filters" class="d-flex justify-content-center mt-4">
+        <label class="btn btn-light d-flex align-items-center justify-content-center mx-2">
+            Institution Type:
+            <select id="institutionTypeFilter" class="form-select border-0 ms-2">
+                <option value="All">All</option>
+            </select>
+        </label>
+        <label class="btn btn-light d-flex align-items-center justify-content-center mx-2">
+            Official Program:
+            <select id="programFilter" class="form-select border-0 ms-2">
+                <option value="All">All</option>
+            </select>
+        </label>
+        <label class="btn btn-light d-flex align-items-center justify-content-center mx-2">
+            Field Study Grouped:
+            <select id="fieldFilter" class="form-select border-0 ms-2">
+                <option value="All">All</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Description Section -->
+    <div id="description" class="cloud-text mx-auto mt-4">
+        This bubble map enables tracking debt in the US by state. 
+        The size of the bubble determines the amount of debt that has been incurred in that region, 
+        whereas the color of the map represents the mean annual earnings in that region. 
+        The darker the bubble is, the higher the earnings.
+    </div>
+
+    <!-- Map Section -->
+    <div id="visualization-container" class="d-flex justify-content-center align-items-center mt-4">
+        <svg width="960" height="700"></svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light text-center py-2 mt-4">
+        Copyright © 2025 Melissa, Sihem, Aimene
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

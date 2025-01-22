@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Borrow</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column justify-content-around" style="background-color: rgb(216, 234, 255);">
+    <!-- Title Section -->
+    <div class="d-flex flex-row p-3 bg-primary text-light align-items-center position-relative" style="height: 10vh;">
+        <img src="./student_debt_logo.png" alt="Website logo" style="height: 90%;">
+        <h1 class="m-3">Beyond The Borrow</h1>
+
+        <a href="../Page-accueil/page-accueil.html" class="btn btn-light d-flex align-items-center justify-content-center position-absolute" style="right: 20px; bottom: 10px; padding: 5px 15px; font-size: 14px; border-radius: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            <i class="fas fa-home me-2"></i> Back to Homepage
+        </a>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="d-flex flex-row align-items-center justify-content-around w-100 mb-5">
+        <!-- <div class="d-flex flex-column justify-content-center h-100 px-3 w-25">
+            <div class="bg-primary text-light rounded mb-3 p-2">
+                <h4 class="mb-3">Data description:</h4>
+                <p>
+                    The data describes the average annual debt per field of study of United States students in US dollars (USD).
+                </p>
+            </div>
+            <div class="bg-secondary text-light rounded mb-3 p-2">
+                <h4 class="mb-3">Visual encodings:</h4>
+                <p>
+                    Each axis represents a field of study, radiating outward from the center.
+                    The chart includes concentric gridlines to provide a scale for debt values.
+                    The red line outlines the values for each field, connecting the data points.
+                    Each axis is labeled by the field of study, and data values are shown in red next to each point.
+                </p>
+            </div>
+            <div class="bg-danger text-light rounded mb-3 p-2">
+                <h4 class="mb-3">Desing rationale:</h4>
+                <p>
+                    The radar chart has been chosen because the shaded area gives a visual insight of which fields of study are dominants.
+                    This design is particularly effective for datasets with multiple categories, offering an intuitive way to compare them simultaneously.
+                </p>
+            </div>
+        </div> -->
+        <div class="d-flex flex-column justify-content-around mt-3" style="max-width: 30%;">
+            <div>
+                <h4>State selection: </h4>
+                <!-- <select id="state-selector" class="form-select m-3" aria-label="Default select example" style="width: 10%;">
+                    <option value="All">All States</option>
+                </select> -->
+                <ul class="form-check mt-5" id="state-selector" style="column-count: 3;">
+                    <li class="d-flex flex-row justify-content-start align-items-center">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckAll" style="margin-right: 1em;">
+                        <label class="form-check-label" for="flexCheckAll">
+                            All States
+                        </label>
+                        <span class="dot mx-2"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-5 cloud-text">
+                This Radar chart allows us to visualize the average annual student debt per field of study for each of the states
+                of the USA. You can select one or more states at once to compare their debt distribution.
+                We propose the "All States" option to compare the average debt of the USA with specific states.
+                The associated color of a state is indicated by a colored dot next to the state name and checkbox.
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-between h-100 w-50 mt-5">
+            <h4>Radar chart of average annual debt per field of study (USD)</h4>
+            <div id="spider_plot" class="responsive-svg-container d-flex flew-row justify-content-center"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="./script.js"></script> 
+    <footer class="bg-primary text-light d-flex flex-row justify-content-center p-2">
+        Copyright © 2025 Melissa, Sihem, Aimene
+    </footer>
+</body>
+</html>
